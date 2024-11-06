@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Каталог товаров</h1>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+    </header>
+    
+
+    <main id="catalog"></main>
+
+    <!-- Навигационная панель по центру -->
+    <footer class="footer-nav">
+        <button onclick="showCatalog()">
+            <img src="catalog.png" alt="Каталог">
+        </button>
+        <button onclick="showFavorites()">
+            <img src="fav.png" alt="Избранное">
+        </button>
+        <button onclick="showCart()">
+            <img src="cart.png" alt="Корзина">
+        </button>
+    </footer>
+
+    <!-- Окна для избранного и корзины -->
+    <section id="favorites" class="hidden">
+        <h2>Избранное</h2>
+        <img src="clear.png" alt="Очистить избранное" width="50" height="50" onclick="clearFavorites()">
+        <div id="favorites-content"></div>
+    </section>
+
+    <section id="cart" class="hidden">
+        <h2>Корзина</h2>
+        <img src="clear.png" alt="Очистить корзину" width="50" height="50" onclick="clearCart()">
+        <div id="cart-content"></div>
+    </section>
+
+    <!-- Уведомление -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
